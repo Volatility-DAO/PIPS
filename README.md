@@ -6,4 +6,4 @@ This is a repository for adding and removing indices from the Volatility DAOracl
 
 To contribure to this repo or to submit a PIP take the following steps:
 
-1. Review PIP Process.
+1. Review [PIP Process](https://github.com/Volatility-DAO/PIPS/blob/main/PIP-Process.md).
