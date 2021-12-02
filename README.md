@@ -72,8 +72,7 @@ Directory Status Keys:
 ### Adding An Index
 | Proposal | Description | Current Step | Status |
 | --- | --- | --- | --- |
-| [IVETH](.&#x2F;tree&#x2F;IVETH&#x2F;Proposed&#x2F;Adding_An_Index&#x2F;Step_2&#x2F;IVETH&#x2F;)| An inverse vol for ETH | Step 2 | Comment |
-| [MFIV](.&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Adding_An_Index&#x2F;Step_1&#x2F;MFIV&#x2F;)| This is my method that is awesome. | Step 1 | Comment |
+| [MFIV](.&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Adding_An_Index&#x2F;Step_1&#x2F;MFIV&#x2F;)| Model Free Implied Volatility | Step 1 | Comment |
 
 ### Removing An Index
 *There are currently no removing an index proposals, start one!*
