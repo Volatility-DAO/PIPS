@@ -5,8 +5,8 @@
 2. ```cd into repo directory```
 
 **Create Branch With Correct Naming Convention**
-1. ```git branch INSERT_METHODOLOGY_INSERT_STEP``` (e.g. MFIV_Step_1)
-2. ```git checkout INSERT_METHODOLOGY_INSERT_STEP``` (e.g. MFIV_Step_1)
+1. ```git branch INSERT_METHODOLOGY``` (e.g. MFIV_Step_1)
+2. ```git checkout INSERT_METHODOLOGY``` (e.g. MFIV_Step_1)
 
 
 Make the necessary changes per the instructions (e.g. add your PIP).
