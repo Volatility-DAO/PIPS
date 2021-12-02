@@ -1,1 +1,9 @@
+# Local Files
 .DS_Store
+
+# Environment Vars
+.env.local
+
+# Node
+node_modules
+
