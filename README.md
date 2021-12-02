@@ -55,8 +55,8 @@ To contribure to this repo or to submit a PIP, follow the instructions for the t
 ### Governance
 | Proposal | Date Approved | Description |
 | --- | --- |------|
-| [Proposal 3](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance&#x2F;Proposal_03&#x2F;)| Sep 14, 2021 | Returning to Voting on Rewards and Reverting the DAO Allocation |
-| [Proposal 4](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance&#x2F;Proposal_04&#x2F;)| Nov 19, 2021 | New Voting Mechanism |
+| [Proposal 3](https://github.com/Volatility-DAO/PIPS/tree/main/Approved/Governance/Proposal_03)| Sep 14, 2021 | Returning to Voting on Rewards and Reverting the DAO Allocation |
+| [Proposal 4](https://github.com/Volatility-DAO/PIPS/tree/main/Approved/Governance/Proposal_04)| Nov 19, 2021 | New Voting Mechanism |
 
 
 ### DAOracle
