@@ -75,7 +75,7 @@ Directory Status Keys:
 ### Adding An Index
 | Proposal | Description | Current Step | Status |
 | --- | --- | --- | --- |
-| [MFIV](.&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Adding_An_Index&#x2F;Step_1&#x2F;MFIV&#x2F;)| Model Free Implied Volatility | Step 1 | Comment |
+| [MFIV](https://github.com/Volatility-DAO/PIPS/blob/1a96dccc31c688c1d33ead742e43ab2807adf3d2/Proposed/Adding_An_Index/Step_1/MFIV/MFIV.pdf)| Model Free Implied Volatility | Step 1 | Comment |
 
 ### Removing An Index
 *There are currently no removing an index proposals, start one!*
