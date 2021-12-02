@@ -1,0 +1,14 @@
+{
+  "scripts": {
+	"readme": "node generate_readme.js"
+  },
+  "devDependencies": {
+    "danger": "^10.7.1"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "list-git-branches": "^1.0.0",
+    "luxon": "^2.1.1",
+    "mustache": "^4.2.0"
+  }
+}

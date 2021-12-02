@@ -1,0 +1,26 @@
+name: Generate README
+on: workflow_dispatch
+
+jobs:
+  generate-readme:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Use Node.js 13.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 13.x
+    - name: Pull all branches
+      run: git pull --all
+    - name: Install yarn
+      run: npm install -g yarn
+    - name: Yarn install, build, and test
+      run: |
+        yarn install  --frozen-lockfile
+    - name: Generate README
+      run: yarn readme
+    - name: Commit and Push new README.md to the repository
+      uses: italianst4/publish-to-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH_NAME: 'main'
