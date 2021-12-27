@@ -14,13 +14,10 @@ Some of the KPIs for the first batch of KPI Option tokens was the creation of a 
 
 This vote will consist of 2 parts. The voting mechanism will be single choice voting (Voting types - Snapshot)
 
-VOTE 1 - Funding
 
-Should the DAO set aside 1,000,000 VOL tokens for the minting of 10,000 VOLunTier2 tokens (5000 now)? Any leftover funds will revert back to the DAO treasury. YES or NO
+VOTE 1 - Minting + KPI Criteria
 
-VOTE 2 - Minting
-
-Should the DAO use the funding from Part 1 of this proposal to mint VOLunTier2 KPI options according to the following parameters? YES or NO
+Should the DAO mint VOLunTier2 KPI options according to the following parameters? YES or NO
 
 Range = 0-100; same as VOLunTier1
 Expiration Time = June 6, 2022
@@ -44,3 +41,7 @@ Token holders may roll their VOLunTier1 tokens into new VOLunTier2 tokens at an 
 Users have until Feb 15th 12:00 UTC to send Tier1 into DAO Treasury. By Feb 20th 12:00 UTC the DAO will batch send VOLunTier2 Options to all those that sent into the treasury.
 
 Option holders who miss this deadline or choose not to rollover may also choose to redeem VOLunTier1 tokens for their redemption value on UMAs UI: https://umaverse.vercel.app/0x7F7fa3678170208f197E0AD14894Df0BA2A6090d
+
+VOTE 2 - Funding
+
+Should the DAO set aside 500,000 VOL tokens for the minting of 5,000 VOLunTier2 tokens defined in vote 1? The DAO can propose a vote to allocate more VOL for minting more tokens at anytime and any leftover funds will revert back to the DAO treasury. YES or NO
