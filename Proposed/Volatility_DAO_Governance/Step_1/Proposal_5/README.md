@@ -1,6 +1,7 @@
 # Proposal 5
 
 | PROPOSAL_5 | Creation of KPI Options Batch 2 |
+| --- | --- |
 | Current Status | Draft |
 | Author | Joe.78, sethm.eth, Whitewater1 |
 | Date Created | 12/24/21 |
