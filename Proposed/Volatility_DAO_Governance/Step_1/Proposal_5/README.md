@@ -1,3 +1,4 @@
+# Proposal 5
 
 | PROPOSAL_5 | Creation of KPI Options Batch 2 |
 | Current Status | Draft |
@@ -6,17 +7,26 @@
 | Forum Link | https://forum.volatility.com/t/draft-proposal-5-creation-of-kpi-options-batch-2-voluntier-2/106 |
 | Simple Summary | This proposal will allocate funds to mint VOLunTier2 KPI options and specify the parameters of the options. |
 
-Abstract
+## Abstract
 Proposal 5 is a new proposal for the funding and creation of VOLunTier 2 KPI Option tokens. KPI Options are used to incentivise community participation and to draw new talent to the DAO for the growth and development of the DAO and the Volatility Protocol project.
 
-Motivation
+## Motivation
 Some of the KPIs for the first batch of KPI Option tokens was the creation of a second batch of options through a PIP, minting those options and creating a rollover mechanism from the first batch to the second batch. This proposal would help fulfil those KPIs as well as create another batch to be used to incentivise broader participation within the community for the growth of the DAO and for outreach efforts to expand the community around the Volatility Protocol project.
+
+## Language For Vote
 
 This vote will consist of 2 parts. The voting mechanism will be single choice voting (Voting types - Snapshot)
 
-
+| TITLE |
+| --- |
+```
 VOTE 1 - Minting + KPI Criteria
+``` 
 
+
+| BODY |
+| --- |
+```
 Should the DAO mint VOLunTier2 KPI options according to the following parameters? YES or NO
 
 Range = 0-100; same as VOLunTier1
@@ -42,6 +52,31 @@ Users have until Feb 15th 12:00 UTC to send Tier1 into DAO Treasury. By Feb 20th
 
 Option holders who miss this deadline or choose not to rollover may also choose to redeem VOLunTier1 tokens for their redemption value on UMAs UI: https://umaverse.vercel.app/0x7F7fa3678170208f197E0AD14894Df0BA2A6090d
 
-VOTE 2 - Funding
 
-Should the DAO set aside 500,000 VOL tokens for the minting of 5,000 VOLunTier2 tokens defined in vote 1? The DAO can propose a vote to allocate more VOL for minting more tokens at anytime and any leftover funds will revert back to the DAO treasury. YES or NO
+VOTING CHOICE LABELS AND DEFINITIONS 
+
+YES- The above will be implemented.
+
+NO - The above will not be implemented.
+```
+
+
+| TITLE |
+| --- |
+```
+VOTE 2 - Funding
+``` 
+
+
+| BODY |
+| --- |
+```
+Should the DAO set aside 500,000 VOL tokens for the minting of 5,000 VOLunTier2 tokens defined in "VOTE 1 - Minting + KPI Criteria"? The DAO can propose a vote to allocate more VOL for minting more tokens at anytime and any leftover funds will revert back to the DAO treasury. This is a single choice vote
+
+VOTING CHOICE LABELS AND DEFINITIONS
+
+
+YES - Allocate 500,000 VOL
+
+NO - Do not allocate
+```
