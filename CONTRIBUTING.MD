@@ -4,7 +4,7 @@ This project welcomes many kinds of contribution! Here are a few suggestions:
 
 - Add a new index
 - Remove an index
-- Change an indexes parameters
+- Change an index's parameters
 - Change an existing index
 - Submit a proposal for the DAO
 
