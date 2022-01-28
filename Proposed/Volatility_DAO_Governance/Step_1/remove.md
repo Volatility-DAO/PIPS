@@ -1,1 +1,0 @@
-This file will be removed when a proposal is added to this directory
