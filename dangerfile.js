@@ -26,12 +26,12 @@ const step_validations = [];
 danger.git.created_files.forEach((file) => {
 	let validation = file.match(/^(([a-z\_]+)\/([a-z\_]+)\/(([a-z1-3\_]+))\/)*([a-z0-9\-\_]+)\/([a-z0-9\-\_\.]+)/i);
 
-	if (!valid_folder_paths.includes(validation[1]) || validation === null) {
-		fail("File: `" + file + "` cannot be created outside of a valid directory.");
-	} else {
+	// if (!valid_folder_paths.includes(validation[1]) || validation === null) {
+	// 	fail("File: `" + file + "` cannot be created outside of a valid directory.");
+	// } else {
 		// caching validations for futher validations
 		step_validations.push(validation);
-	}
+	// }
 });
 
 // first, let's make sure no file is modified outside of their respective folders
