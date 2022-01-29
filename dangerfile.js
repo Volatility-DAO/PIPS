@@ -47,22 +47,22 @@ danger.git.modified_files.forEach((file) => {
 });
 
 // let's make sure all new files are in the same proposal type
-if (!step_validations.every((v, i, a) => v[3].toLowerCase() === a[0][3].toLowerCase())) {
-	fail("You should only be working on a single proposal type (PIP/Governance) at a time, you've added files for multiple proposal types on this Pull Request.");
-	return;
-}
+// if (!step_validations.every((v, i, a) => v[3].toLowerCase() === a[0][3].toLowerCase())) {
+// 	fail("You should only be working on a single proposal type (PIP/Governance) at a time, you've added files for multiple proposal types on this Pull Request.");
+// 	return;
+// }
 
 // let's make sure all new files are in the same Step
-if (!step_validations.every((v, i, a) => v[4].toLowerCase() === a[0][4].toLowerCase())) {
-	fail("You should only be working on a single step at a time, you've added files for multiple steps on this Pull Request.");
-	return;
-}
+// if (!step_validations.every((v, i, a) => v[4].toLowerCase() === a[0][4].toLowerCase())) {
+// 	fail("You should only be working on a single step at a time, you've added files for multiple steps on this Pull Request.");
+// 	return;
+// }
 
 // let's make sure all new files are in the same proposal
-if (!step_validations.every((v, i, a) => v[6].toLowerCase() === a[0][6].toLowerCase())) {
-	fail("You should only be working on a single proposal folder at a time, you've added files in multiple proposals folders on this Pull Request.");
-	return;
-}
+// if (!step_validations.every((v, i, a) => v[6].toLowerCase() === a[0][6].toLowerCase())) {
+// 	fail("You should only be working on a single proposal folder at a time, you've added files in multiple proposals folders on this Pull Request.");
+// 	return;
+// }
 
 // let's set the current step and methodology name
 const current_step = step_validations[0][4].replace('Step_', '');
