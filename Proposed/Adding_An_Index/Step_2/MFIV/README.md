@@ -5,7 +5,7 @@ This nodejs project is intended to be used to compute MFIV (model-free implied v
 ## Getting Started
 
 ```
-$ cd mfiv_implimentation
+$ cd mfiv_implementation
 $ npm install
 $ npm run build
 $ npm test
@@ -24,7 +24,7 @@ In the terminal you should see the following:
 See [mfiv schema](./schemas/mfivexample.schema.json)
 
 ## Getting IPFS Data
-
+```
 (********************************************************)
 (*             IMPORTANT NOTE ON IPFS DATA              *)
 (*                                                      *)
@@ -35,7 +35,7 @@ See [mfiv schema](./schemas/mfivexample.schema.json)
 (*    data is added.                                    *)
 (*                                                      *)
 (********************************************************)
-
+```
 There are two ways you can easily access the IPFS data:
 
 1. Programatically Create IPFS JSON file.
