@@ -5,7 +5,7 @@ This nodejs project is intended to be used to compute MFIV (model-free implied v
 ## Getting Started
 
 ```
-$ cd mfiv_implementation
+$ cd implementation
 $ npm install
 $ npm run build
 $ npm test
@@ -99,7 +99,7 @@ Here's an example output URL. Notice it uses the IPFShash.
 https://ipfs.io/ipfs/bafybeicwobtev44ivytnii24myc6fhxgpcimxnryneqlghbg4f2vcf6ugy
 ```
 
-Download the data and name evidence.json and add into the mfiv_implementation folder.
+Download the data and name evidence.json and add into the `implementation` folder.
 
 **Manually Create URL**
 
@@ -131,7 +131,7 @@ Which would give the following URL:
 https://storageapi.fleek.co/volatilitycom-bucket//indices/methodology=mfiv/interval=14d/currency=ETH/at=2022-01-27T01:00:00Z/evidence.json
 ```
 
-Download the data and add into the mfiv_implementation folder.
+Download the data and add into the `implementation` folder.
 
 ## Verifying an Index
 
