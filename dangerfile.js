@@ -2,94 +2,93 @@ const { danger, fail } = require('danger');
 const fse = require('fs-extra')
 
 const valid_folder_paths = [
-	'Proposed/Adding_An_Index/Step_1/',
-	'Proposed/Adding_An_Index/Step_2/',
-	'Proposed/Adding_An_Index/Step_3/',
-	'Proposed/Changing_Parameters/',
-	'Proposed/Removing_An_Index/',
-	'Proposed/Volatility_DAO_Governance/Step_1/'
+	'^(Proposed\/(Adding_An_Index)\/Step_([1-3])\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
+	'^(Proposed\/(Adding_An_Index)\/Step_([1-3])\/([a-z0-9\-\_]+))\/implementation\/([a-z0-9\-\_\/\.]*)',
+	'^(Proposed\/(Changing_Parameters)\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
+	'^(Proposed\/(Removing_An_Index)\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
+	'^(Proposed\/(Volatility_DAO_Governance)\/Step_([1])\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
 ];
 
 // first, let's make sure no file is deleted outside of their respective folders
 danger.git.deleted_files.forEach((file) => {
-	let validation = file.match(/^(([a-z\_]+)\/([a-z\_]+)\/(([a-z1-3\_]+))\/)*([a-z0-9\-\_]+)/i);
+	let validations = valid_folder_paths.map((path_regex) => file.match(new RegExp(path_regex, 'i'))).filter((i) => i);
 
-	if (!valid_folder_paths.includes(validation[1]) || validation === null) {
+	if (validations.length === 0) {
 		fail("File: `" + file + "` cannot be deleted.");
 	}
 });
-
 const step_validations = [];
-
 
 // first, let's make sure no file is created outside of their respective folders
 danger.git.created_files.forEach((file) => {
-	let validation = file.match(/^(([a-z\_]+)\/([a-z\_]+)\/(([a-z1-3\_]+))\/)*([a-z0-9\-\_]+)\/([a-z0-9\-\_\.]+)/i);
+	let validations = valid_folder_paths.map((path_regex) => file.match(new RegExp(path_regex, 'i'))).filter((i) => i);
 
-	if (!valid_folder_paths.includes(validation[1]) || validation === null) {
+	if (validations.length === 0) {
 		fail("File: `" + file + "` cannot be created outside of a valid directory.");
 	} else {
 		// caching validations for futher validations
-		step_validations.push(validation);
+		step_validations.push(validations[0]);
 	}
 });
 
 // first, let's make sure no file is modified outside of their respective folders
 danger.git.modified_files.forEach((file) => {
-	let validation = file.match(/^(([a-z\_]+)\/([a-z\_]+)\/(([a-z1-3\_]+))\/)*([a-z0-9\-\_]+)/i);
+	let validations = valid_folder_paths.map((path_regex) => file.match(new RegExp(path_regex, 'i'))).filter((i) => i);
 
-	if (!valid_folder_paths.includes(validation[1]) || validation === null) {
+	if (validations.length === 0) {
 		fail("File: `" + file + "` cannot be modified.");
 	} else {
 		// caching validations for futher validations
-		step_validations.push(validation);
+		step_validations.push(validations[0]);
 	}
 });
 
+// let's set the current step and methodology name
+const current_step = step_validations[0][3];
+const proposal_type = step_validations[0][2];
+const methodology_name = step_validations[0][4];
+const proposal_working_dir = './' + step_validations[0][1];
+
+// console.log(step_validations);
+
 // let's make sure all new files are in the same proposal type
-if (!step_validations.every((v, i, a) => v[3].toLowerCase() === a[0][3].toLowerCase())) {
+if (!step_validations.every((v, i, a) => v[2].toLowerCase() === a[0][2].toLowerCase())) {
 	fail("You should only be working on a single proposal type (PIP/Governance) at a time, you've added files for multiple proposal types on this Pull Request.");
 	return;
 }
 
 // let's make sure all new files are in the same Step
-if (!step_validations.every((v, i, a) => v[4].toLowerCase() === a[0][4].toLowerCase())) {
+if (!step_validations.every((v, i, a) => v[3].toLowerCase() === a[0][3].toLowerCase())) {
 	fail("You should only be working on a single step at a time, you've added files for multiple steps on this Pull Request.");
 	return;
 }
 
 // let's make sure all new files are in the same proposal
-if (!step_validations.every((v, i, a) => v[6].toLowerCase() === a[0][6].toLowerCase())) {
+if (!step_validations.every((v, i, a) => v[4].toLowerCase() === a[0][4].toLowerCase())) {
 	fail("You should only be working on a single proposal folder at a time, you've added files in multiple proposals folders on this Pull Request.");
 	return;
 }
-
-// let's set the current step and methodology name
-const current_step = step_validations[0][4].replace('Step_', '');
-const proposal_type = step_validations[0][3];
-const methodology_name = step_validations[0][6];
-const proposal_working_dir = './' + step_validations[0][1] + '/' + methodology_name;
 
 // let's make sure the following files are present at all times
 const required_files = [
 	'status.json',
 ];
 
-const get_proposal_files = function (path, files) {
+const get_proposal_files = function (path, proposal_content) {
 	fse.readdirSync(path).forEach((file) => {
 		let subpath = path + '/' + file;
 
 		if (fse.lstatSync(subpath).isDirectory()) {
-			files = get_proposal_files(subpath, files);
+			proposal_content.paths.push(file);
 		} else {
-			files.push(file);
+			proposal_content.files.push(file);
 		}
 	});
 
-	return files;
+	return proposal_content;
 }
 
-let proposal_files = get_proposal_files(proposal_working_dir,[]);
+let proposal_content = get_proposal_files(proposal_working_dir, { paths: [], files: [] });
 
 // now we determine which proposal type they're submitting and validate accordingly
 if (proposal_type === 'Adding_An_Index') {
@@ -100,9 +99,19 @@ if (proposal_type === 'Adding_An_Index') {
 		methodology_name + '.pdf',
 	], ...required_files];
 
+	const required_adding_an_index_paths = [
+		'implementation',
+	];
+
 	required_adding_an_index_files.forEach((rf) => {
-		if (!proposal_files.some(v => v.toLowerCase() === rf.toLowerCase())) {
+		if (!proposal_content.files.some(v => v.toLowerCase() === rf.toLowerCase())) {
 			fail('File required: `' + rf + '`, please add.');
+		}
+	});
+
+	required_adding_an_index_paths.forEach((rf) => {
+		if (!proposal_content.paths.some(v => v.toLowerCase() === rf.toLowerCase())) {
+			fail('Directory required: `' + rf + '`, please add.');
 		}
 	});
 
@@ -113,7 +122,7 @@ if (proposal_type === 'Adding_An_Index') {
 	];
 	const has_methodology_pip_file = [];
 	methodology_pip_file.forEach((mpf) => {
-		has_methodology_pip_file.push(proposal_files.some(v => v.toLowerCase() === mpf.toLowerCase()));
+		has_methodology_pip_file.push(proposal_content.files.some(v => v.toLowerCase() === mpf.toLowerCase()));
 	});
 	// neither file is there
 	if (!has_methodology_pip_file.includes(true)) {
@@ -146,7 +155,7 @@ if (proposal_type === 'Adding_An_Index') {
 	], required_files];
 
 	required_adding_an_index_files.forEach((rf) => {
-		if (!proposal_files.some(v => v.toLowerCase() === rf.toLowerCase())) {
+		if (!proposal_content.files.some(v => v.toLowerCase() === rf.toLowerCase())) {
 			fail('File required: `' + rf + '`, please add.');
 		}
 	});

@@ -67,6 +67,8 @@ all_branches.forEach((branch) => {
 		get_json_files(PROPOSED_PATH, status_json_files);
 	}
 
+	const repo_root = 'https://github.com/Volatility-DAO/PIPS/tree/';
+
 
 	// now we parse the paths for template data
 	status_json_files.forEach((file) => {
@@ -76,7 +78,7 @@ all_branches.forEach((branch) => {
 			status_json = fse.readJsonSync(file);
 
 			// let's add the path for template
-			status_json.path = file.replace('status.json', '').replace('./', './tree/' + branch + '/');
+			status_json.path = repo_root + branch + '/' + file.replace('status.json', '').replace('./', '');
 
 			// BUGFIX: let's assume the location of the PDF file
 			// status_json.proposal_pdf_path = validation[0].replace('status.json', validation[4] + '.pdf');
