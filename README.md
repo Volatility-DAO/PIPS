@@ -73,7 +73,6 @@ Directory Status Keys:
 | Proposal | Description | Current Step | Status |
 | --- | --- | --- | --- |
 | [PROPOSAL_5](https:&#x2F;&#x2F;github.com&#x2F;Volatility-DAO&#x2F;PIPS&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_5&#x2F;)| Creation of KPI Options Batch 2 | Step 1 | Comment |
-| [PROPOSAL_5](https:&#x2F;&#x2F;github.com&#x2F;Volatility-DAO&#x2F;PIPS&#x2F;tree&#x2F;contributing-md&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_5&#x2F;)| Creation of KPI Options Batch 2 | Step 1 | Comment |
 
 ### Adding An Index
 | Proposal | Description | Current Step | Status |
