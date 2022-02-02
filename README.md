@@ -55,8 +55,8 @@ To contribure to this repo or to submit a PIP, follow the instructions for the t
 ### Governance
 | Proposal | Date Approved | Description |
 | --- | --- |------|
-| [Proposal 3](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance&#x2F;Proposal_03&#x2F;)| Sep 14, 2021 | Returning to Voting on Rewards and Reverting the DAO Allocation |
-| [Proposal 4](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance&#x2F;Proposal_04&#x2F;)| Nov 19, 2021 | New Voting Mechanism |
+| [Proposal 3](https:&#x2F;&#x2F;github.com&#x2F;Volatility-DAO&#x2F;PIPS&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance&#x2F;Proposal_03&#x2F;)| Sep 14, 2021 | Returning to Voting on Rewards and Reverting the DAO Allocation |
+| [Proposal 4](https:&#x2F;&#x2F;github.com&#x2F;Volatility-DAO&#x2F;PIPS&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance&#x2F;Proposal_04&#x2F;)| Nov 19, 2021 | New Voting Mechanism |
 
 
 ### DAOracle
@@ -72,13 +72,13 @@ Directory Status Keys:
 ### Volatility DAO Governance
 | Proposal | Description | Current Step | Status |
 | --- | --- | --- | --- |
-| [PROPOSAL_5](.&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_5&#x2F;)| Creation of KPI Options Batch 2 | Step 1 | Comment |
-| [PROPOSAL_5](.&#x2F;tree&#x2F;contributing-md&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_5&#x2F;)| Creation of KPI Options Batch 2 | Step 1 | Comment |
+| [PROPOSAL_5](https:&#x2F;&#x2F;github.com&#x2F;Volatility-DAO&#x2F;PIPS&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_5&#x2F;)| Creation of KPI Options Batch 2 | Step 1 | Comment |
+| [PROPOSAL_5](https:&#x2F;&#x2F;github.com&#x2F;Volatility-DAO&#x2F;PIPS&#x2F;tree&#x2F;contributing-md&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_5&#x2F;)| Creation of KPI Options Batch 2 | Step 1 | Comment |
 
 ### Adding An Index
 | Proposal | Description | Current Step | Status |
 | --- | --- | --- | --- |
-| [MFIV](.&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Adding_An_Index&#x2F;Step_2&#x2F;MFIV&#x2F;)| Model Free Implied Volatility | Step 2 | Comment |
+| [MFIV](https:&#x2F;&#x2F;github.com&#x2F;Volatility-DAO&#x2F;PIPS&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Adding_An_Index&#x2F;Step_2&#x2F;MFIV&#x2F;)| Model Free Implied Volatility | Step 2 | Comment |
 
 ### Removing An Index
 *There are currently no removing an index proposals, start one!*
