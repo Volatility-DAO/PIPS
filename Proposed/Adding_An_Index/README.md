@@ -53,12 +53,13 @@ To submit a version of an implementation take the following steps (**DO NOT DUPL
 	- `README.md`.
 	- `Implementation_Parameters.md`
 	- `LICENSE` (Your open-source implementation will need to have an MIT license to be considered by the DAO.)
-2. In your methodology directory, add your open-source code.
-3. Move your methodology directory to the [/Step_2/](Step_2) directory.
-4. Submit a pull request for your working methodology branch.
-5. Notify @everyone in the [Discord pips channel](https://discord.com/channels/807306992389062668/904816574215635025) of the Volatility DAO discord of the pull request. 
-6. Users should be able to calculate your index. DAO users may comment on all files of your pull request. If they run into any issues or have any questions you should answer them. You should respond to and resolve as many comments as possible.
-7. A community call will be scheduled to discuss if the pull request should be approved or if more comments need to be resolved. A verbal vote will take place in the call or an informal vote will be done on Discord.
+2. In your methodology directory, add your open-source code to the `implementation` directory.
+3. In the `implementation` directory, provide and overview and detail instructions on how to test and run your open-source code.
+4. Move your methodology directory to the [/Step_2/](Step_2) directory.
+5. Submit a pull request for your working methodology branch.
+6. Notify @everyone in the [Discord pips channel](https://discord.com/channels/807306992389062668/904816574215635025) of the Volatility DAO discord of the pull request. 
+7. Users should be able to calculate your index. DAO users may comment on all files of your pull request. If they run into any issues or have any questions you should answer them. You should respond to and resolve as many comments as possible.
+8. A community call will be scheduled to discuss if the pull request should be approved or if more comments need to be resolved. A verbal vote will take place in the call or an informal vote will be done on Discord.
 
 If the pull request is approved, move onto Step 3. If the pull request is not approved you can make additional changes and repeat the necessary steps above or you can Abandon your PIP.
 </details>
