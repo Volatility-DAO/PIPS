@@ -55,8 +55,8 @@ To contribure to this repo or to submit a PIP, follow the instructions for the t
 ### Governance
 | Proposal | Date Approved | Description |
 | --- | --- |------|
-| [Proposal 3](https://github.com/Volatility-DAO/PIPS/tree/main/Approved/Governance/Proposal_03)| Sep 14, 2021 | Returning to Voting on Rewards and Reverting the DAO Allocation |
-| [Proposal 4](https://github.com/Volatility-DAO/PIPS/tree/main/Approved/Governance/Proposal_04)| Nov 19, 2021 | New Voting Mechanism |
+| [Proposal 3](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance&#x2F;Proposal_03&#x2F;)| Sep 14, 2021 | Returning to Voting on Rewards and Reverting the DAO Allocation |
+| [Proposal 4](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance&#x2F;Proposal_04&#x2F;)| Nov 19, 2021 | New Voting Mechanism |
 
 
 ### DAOracle
@@ -70,12 +70,15 @@ Directory Status Keys:
 * `Voting` - A governance vote is scheduled or live.
 
 ### Volatility DAO Governance
-*There are currently no Volatility DAO Governance proposals, start one!*
+| Proposal | Description | Current Step | Status |
+| --- | --- | --- | --- |
+| [PROPOSAL_5](.&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_5&#x2F;)| Creation of KPI Options Batch 2 | Step 1 | Comment |
+| [PROPOSAL_5](.&#x2F;tree&#x2F;contributing-md&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_5&#x2F;)| Creation of KPI Options Batch 2 | Step 1 | Comment |
 
 ### Adding An Index
 | Proposal | Description | Current Step | Status |
 | --- | --- | --- | --- |
-| [MFIV](https://github.com/Volatility-DAO/PIPS/blob/1a96dccc31c688c1d33ead742e43ab2807adf3d2/Proposed/Adding_An_Index/Step_1/MFIV/MFIV.pdf)| Model Free Implied Volatility | Step 1 | Comment |
+| [MFIV](.&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Adding_An_Index&#x2F;Step_2&#x2F;MFIV&#x2F;)| Model Free Implied Volatility | Step 2 | Comment |
 
 ### Removing An Index
 *There are currently no removing an index proposals, start one!*
