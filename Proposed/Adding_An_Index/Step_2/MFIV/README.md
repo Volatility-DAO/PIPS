@@ -135,20 +135,20 @@ Download the data and add into the `implementation` folder.
 
 ## Verifying an Index
 
-The open-source code in this repo will ingest the ipfs.json input data and verify that the outputs are the same.
+The open-source code in this repo will ingest the evidence.json input data and verify that the outputs are the same.
 
-1. Place the `ipfs.json` file in this directory. If you downloaded using a URL you can rename the hash or timestamp as ipfs.
-2. `./bin/volatility.mjs -f ipfs.json`
+1. Place the `evidence.json` file in this directory. If you downloaded using a URL you can rename the hash or timestamp as ipfs.
+2. `./bin/volatility.mjs -f evidence.json`
 
 
 In the terminal you should see the following:
 
 ```
-🚀 check example/ipfs.json
+🚀 check example/evidence.json
 ✅ File valid.
 ```
 
-3. `cat ipfs.json | jq '. | {methodology: .result.methodology, currency: .result.currency, estimatedFor: .result.estimatedFor, dVol: .result.dVol, invdVol: .result.invdVol, value: .result.value}'`
+3. `cat evidence.json | jq '. | {methodology: .result.methodology, currency: .result.currency, estimatedFor: .result.estimatedFor, dVol: .result.dVol, invdVol: .result.invdVol, value: .result.value}'`
 
 In terminal you will now see the following:
 ```
