@@ -1,3 +1,4 @@
+name: Create readme comment on PR
 on: pull_request
 
 jobs:
@@ -6,11 +7,20 @@ jobs:
     name: Add a comment on the PR for the README
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Comment PR
-        uses: thollander/actions-comment-pull-request@v1
-
+        uses: actions/checkout@v2
         with:
-          message: "View the README here:  xxx"
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: "./"
+      - name: Install yarn
+        run: npm install -g yarn
+      - name: Yarn install, build, and test
+        run: |
+          yarn install  --frozen-lockfile
+      - name: "Get README path"
+        id: readme
+        run: |
+          echo "::set-output name=path::$(node ./branch_pip_path.js)"
+      - name: "Comment PR"
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: |
+            View README here: ${{ github.server_url }}/${{ github.repository }}/tree/${{ github.head_ref }}/Proposed/${{ steps.readme.outputs.path }}#readme
