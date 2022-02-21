@@ -17,7 +17,7 @@ You can use the [spreadsheet here](./Set_Drop.xlsx) to determine what the drop s
 | Name | Variable | Description | Setting |
 | --- | --- | --- | --- |
 | Feed ID | `bytes32 feedID` | The UMIP ID. This is the only variable that is already set. Do not change. | VolatilityDAOracle |
-| Data Post Time Period | `data period` | How often should the creator post the data to an open-source database (e.g. IPFS) | 300 |
+| Data Post Time Period | `data period` | How often in seconds should the creator post the data to an open-source database (e.g. IPFS) | 300 |
 | Proposal Dispute Window | `uint32 ttl` | The length of time in seconds during which a value can be disputed | 300 |
 
 **Bond Settings**
