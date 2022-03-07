@@ -1,7 +1,7 @@
 # Proposal Template
 
 
-| Proposal_05 | VOL for DAOracle launch |
+| Proposal_06 | VOL for DAOracle launch |
 | --- | --- |
 | Current Step | Step 1 |
 | Author | Theta |
