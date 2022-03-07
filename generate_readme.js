@@ -10,7 +10,7 @@ const MUSTACHE_README = './README.mustache';
 const PROPOSED_PATH = './Proposed';
 const APPROVED_PATH = './Approved';
 const REMOVED_FAILED_PATH = './Removed_Or_Failed';
-const IGNORED_DIRS = ['PIP_TEMPLATE', 'GOVERNANCE_PROPOSAL_TEMPLATE'];
+const IGNORED_DIRS = ['PIP_TEMPLATE', 'GOVERNANCE_PROPOSAL_TEMPLATE', 'System_Parameters'];
 
 const template_data = {
 	Proposed: {
