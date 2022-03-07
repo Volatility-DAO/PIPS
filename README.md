@@ -58,11 +58,16 @@ To contribute to this repo or to submit a PIP, follow the instructions for the t
 ## Approved 
 
 ### The Volatility DAO
-*There are currently no approved governance proposals, start one!*
+| Proposal | Date Approved | Description |
+| --- | --- | --- | 
+| [Proposal 3](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance_PIPs&#x2F;Proposal_03&#x2F;)| Sep 14, 2021 | Returning to Voting on Rewards and Reverting the DAO Allocation |
+| [Proposal 4](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance_PIPs&#x2F;Proposal_04&#x2F;)| Nov 19, 2021 | New Voting Mechanism |
 
 
 ### The Volatility Oracle
-*There are currently no approved Volatility Oracle proposals, start one!*
+| Proposal | Date Approved | Description |
+| --- | --- | --- | 
+| [MFIV](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Volatility_Oracle_PIPs&#x2F;MFIV&#x2F;)| Feb 26, 2022 | Model Free Implied Volatility |
 
 ## Proposed
 
