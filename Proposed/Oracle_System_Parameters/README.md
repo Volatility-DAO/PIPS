@@ -66,7 +66,6 @@ For detailed steps on how to submit a pull request, you can follow the instructi
 
 </details>
 
-
 <details><summary> Step 1 - Propose System Parameters</summary>
 To submit a change to the System Parameters, take the following steps:
 
