@@ -49,7 +49,7 @@ const get_json_files = function (path, files) {
 }
 
 // let's get all branches (ignoring "main")
-const all_branches = [...new Set(branches.sync('.'))].filter(branch => branch != 'main');
+const all_branches = [...new Set(branches.sync('.'))];
 
 console.log(all_branches);
 
@@ -61,10 +61,12 @@ all_branches.forEach((branch) => {
 	// switching branch
 	cp.execSync('git checkout ' + branch);
 
-	// now, let's scan the 3 primary paths
-	get_json_files(PROPOSED_PATH, status_json_files);
-	get_json_files(APPROVED_PATH, status_json_files);
-	get_json_files(REMOVED_FAILED_PATH, status_json_files);
+	if(branch == 'main') {
+		get_json_files(APPROVED_PATH, status_json_files);
+		get_json_files(REMOVED_FAILED_PATH, status_json_files);
+	} else {
+		get_json_files(PROPOSED_PATH, status_json_files);
+	}
 
 	// now we parse the paths for template data
 	status_json_files.forEach((file) => {
