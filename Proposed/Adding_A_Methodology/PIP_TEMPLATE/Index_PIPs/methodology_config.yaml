@@ -1,0 +1,5 @@
+methodology:
+  - name: "METHODOLOGY NAME HERE"
+    dataPeriod: "*/5 * * * *"
+    indices:
+      - name: "INDICE NAME HERE"

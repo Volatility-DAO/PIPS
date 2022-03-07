@@ -14,28 +14,28 @@ const IGNORED_DIRS = ['PIP_TEMPLATE', 'GOVERNANCE_PROPOSAL_TEMPLATE'];
 
 const template_data = {
 	Proposed: {
-		Adding_An_Index: [],
-		Changing_Parameters: [],
-		Removing_An_Index: [],
-		Volatility_DAO_Governance: []
+		Volatility_DAO_Governance: [],
+		Oracle_System_Parameters: [],
+		Adding_A_Methodology: [],
+		Managing_A_Methodology: [],
+		Managing_An_Index: [],
 	},
 	Approved: {
-		DAOracle: [],
-		Governance: []
+		Governance_PIPs: [],
+		Volatility_Oracle_PIPs: []
 	},
 	Removed_Or_Failed: {
-		DAOracle: [],
-		Governance: []
+		Volatility_Oracle_Indices: [],
+		Volatility_Oracle_Methodologies: []
 	}
 
 };
 
 // detect all status.json files
 const get_json_files = function (path, files) {
-	
 	fse.readdirSync(path).forEach((file) => {
 		let subpath = path + '/' + file;
-		
+
 		if (!IGNORED_DIRS.includes(file) && fse.lstatSync(subpath).isDirectory()) {
 			files = get_json_files(subpath, files);
 		} else {
@@ -49,7 +49,9 @@ const get_json_files = function (path, files) {
 }
 
 // let's get all branches (ignoring "main")
-const all_branches = [...new Set(branches.sync('.'))];
+const all_branches = [...new Set(branches.sync('.'))].filter(branch => branch != 'main');
+
+console.log(all_branches);
 
 // now we need to loop through and switch to each branch to get status.json files
 all_branches.forEach((branch) => {
@@ -59,29 +61,20 @@ all_branches.forEach((branch) => {
 	// switching branch
 	cp.execSync('git checkout ' + branch);
 
-	// now, let's scan the primary paths
-	if(branch === 'main') {
-		get_json_files(APPROVED_PATH, status_json_files);
-		get_json_files(REMOVED_FAILED_PATH, status_json_files);
-	} else {
-		get_json_files(PROPOSED_PATH, status_json_files);
-	}
-
-	const repo_root = 'https://github.com/Volatility-DAO/PIPS/tree/';
-
+	// now, let's scan the 3 primary paths
+	get_json_files(PROPOSED_PATH, status_json_files);
+	get_json_files(APPROVED_PATH, status_json_files);
+	get_json_files(REMOVED_FAILED_PATH, status_json_files);
 
 	// now we parse the paths for template data
 	status_json_files.forEach((file) => {
-		let validation = file.match(/^.\/([a-z\_]+)\/([a-z\_]+)\/([a-z0-9\-\_]+)\/([a-z0-9\-\_\.]+)\/*([a-z0-9\-\_\.]+)*/i);
+		let validation = file.match(/^.\/([a-z\_]+)\/([a-z\_]+)\/([a-z0-9\-\_]+)\/([a-z0-9\-\_\.]+)\/*([a-z0-9\-\_\.]+)*/i)
 
 		if (template_data.hasOwnProperty(validation[1]) && template_data[validation[1]].hasOwnProperty(validation[2])) {
 			status_json = fse.readJsonSync(file);
 
 			// let's add the path for template
-			status_json.path = repo_root + branch + '/' + file.replace('status.json', '').replace('./', '');
-
-			// BUGFIX: let's assume the location of the PDF file
-			// status_json.proposal_pdf_path = validation[0].replace('status.json', validation[4] + '.pdf');
+			status_json.path = file.replace('status.json', '').replace('./', './tree/' + branch + '/');
 
 			// let's format the approval date
 			status_json.approval_date = DateTime.fromISO(status_json.approval_date).toLocaleString(DateTime.DATE_MED);

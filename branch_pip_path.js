@@ -6,9 +6,10 @@ const PROPOSED_PATH = './Proposed';
 const IGNORED_DIRS = ['PIP_TEMPLATE', 'GOVERNANCE_PROPOSAL_TEMPLATE'];
 
 const proposed_paths = [
-	'Adding_An_Index',
-	'Changing_Parameters',
-	'Removing_An_Index',
+	'Adding_A_Methodology',
+	'Managing_A_Methodology',
+	'Managing_An_Index',
+	'Oracle_System_Parameters',
 	'Volatility_DAO_Governance'
 ];
 
