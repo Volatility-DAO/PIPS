@@ -1,5 +1,5 @@
-# Approaved Proposals
+# Approved Proposals
 
-[See current Approved Governance proposals here](/../../#governance).
+[See current Approved Governance proposals here](/../../#approved).
 
-[See current Approved Volatility Oracle proposals here](/../../#daoracle).
+[See current Approved Volatility Oracle proposals here](/../../#approved).

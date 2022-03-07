@@ -1,7 +1,5 @@
 {
 	"name": "MFIV",
 	"description":"Model Free Implied Volatility",
-	"status": "Comment",
-	"status_outbound_url": false,
-	"approval_date": false
+	"approval_date": "2022-02-26"
 }
