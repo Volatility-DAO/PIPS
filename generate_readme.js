@@ -76,7 +76,7 @@ all_branches.forEach((branch) => {
 			status_json = fse.readJsonSync(file);
 
 			// let's add the path for template
-			status_json.path = file.replace('status.json', '').replace('./', 'tree/' + branch + '/');
+			status_json.path = file.replace('status.json', '').replace('./', 'tree/' + branch + '/').replace('/blob/main', '');
 
 			// let's format the approval date
 			status_json.approval_date = DateTime.fromISO(status_json.approval_date).toLocaleString(DateTime.DATE_MED);
