@@ -58,16 +58,11 @@ To contribute to this repo or to submit a PIP, follow the instructions for the t
 ## Approved 
 
 ### The Volatility DAO
-| Proposal | Date Approved | Description |
-| --- | --- | --- | 
-| [Proposal 3](.&#x2F;tree&#x2F;MFIV_STEP_3&#x2F;Approved&#x2F;Governance_PIPs&#x2F;Proposal_03&#x2F;)| Sep 14, 2021 | Returning to Voting on Rewards and Reverting the DAO Allocation |
-| [Proposal 4](.&#x2F;tree&#x2F;MFIV_STEP_3&#x2F;Approved&#x2F;Governance_PIPs&#x2F;Proposal_04&#x2F;)| Nov 19, 2021 | New Voting Mechanism |
+*There are currently no approved governance proposals, start one!*
 
 
 ### The Volatility Oracle
-| Proposal | Date Approved | Description |
-| --- | --- | --- | 
-| [MFIV](.&#x2F;tree&#x2F;MFIV_STEP_3&#x2F;Approved&#x2F;Volatility_Oracle_PIPs&#x2F;MFIV&#x2F;)| Invalid DateTime | Model Free Implied Volatility |
+*There are currently no approved Volatility Oracle proposals, start one!*
 
 ## Proposed
 
@@ -77,9 +72,7 @@ Directory Status Keys:
 * `Voting` - A governance vote is scheduled or live.
 
 ### Volatility DAO Governance
-| Proposal | Description | Current Step |
-| --- | --- | --- | 
-| [PROPOSAL_5](.&#x2F;tree&#x2F;MFIV&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_5&#x2F;)| Creation of KPI Options Batch 2 | Step 1 |
+*There are currently no Volatility DAO Governance proposals, start one!*
 
 ### Oracle System Parameters
 *There are currently no oracle system parameter proposals, start one!*
