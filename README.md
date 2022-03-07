@@ -80,7 +80,7 @@ Directory Status Keys:
 ### Volatility DAO Governance
 | Proposal | Description | Current Step |
 | --- | --- | --- | 
-| [PROPOSAL_05](.&#x2F;tree&#x2F;Proposal_06&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_06&#x2F;)| Send 800,000 VOL tokens into a Sponsor Pool when the DAOracle smart contracts launch. These tokens will be used as rewards and bonds to ensure the MFIV index is audited. | Step 1 |
+| [Proposal_06](.&#x2F;tree&#x2F;Proposal_06&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_06&#x2F;)| Send 800,000 VOL tokens into a Sponsor Pool when the DAOracle smart contracts launch. These tokens will be used as rewards and bonds to ensure the MFIV index is audited. | Step 1 |
 
 ### Oracle System Parameters
 *There are currently no oracle system parameter proposals, start one!*
