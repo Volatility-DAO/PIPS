@@ -62,6 +62,7 @@ To contribute to this repo or to submit a PIP, follow the instructions for the t
 | --- | --- | --- | 
 | [Proposal 3](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance_PIPs&#x2F;Proposal_03&#x2F;)| Sep 14, 2021 | Returning to Voting on Rewards and Reverting the DAO Allocation |
 | [Proposal 4](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance_PIPs&#x2F;Proposal_04&#x2F;)| Nov 19, 2021 | New Voting Mechanism |
+| [PROPOSAL_5](.&#x2F;tree&#x2F;main&#x2F;Approved&#x2F;Governance_PIPs&#x2F;Proposal_05&#x2F;)| Jan 1, 2022 | Creation of KPI Options Batch 2 |
 
 
 ### The Volatility Oracle
@@ -77,7 +78,9 @@ Directory Status Keys:
 * `Voting` - A governance vote is scheduled or live.
 
 ### Volatility DAO Governance
-*There are currently no Volatility DAO Governance proposals, start one!*
+| Proposal | Description | Current Step |
+| --- | --- | --- | 
+| [PROPOSAL_05](.&#x2F;tree&#x2F;Proposal_06&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_06&#x2F;)| Send 800,000 VOL tokens into a Sponsor Pool when the DAOracle smart contracts launch. These tokens will be used as rewards and bonds to ensure the MFIV index is audited. | Step 1 |
 
 ### Oracle System Parameters
 *There are currently no oracle system parameter proposals, start one!*
