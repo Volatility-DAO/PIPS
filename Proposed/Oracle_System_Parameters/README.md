@@ -70,11 +70,12 @@ For detailed steps on how to submit a pull request, you can follow the instructi
 To submit a change to the System Parameters, take the following steps:
 
 1. Fill out the `System_Parameters.md` file. Note: This file is a copy of the currently used parameters. Only fill out parameters that you are proposing to change.
-2. Move your `System_Parameters_YYYY-MM-DD`directory into the [Step_1](Proposed/Oracle_System_Parameters/Step_1) directory.
-3. Submit a pull request for your branch.
-4. Notify @everyone in the [Discord PIPs channel](https://discord.com/channels/807306992389062668/904816574215635025) of the Volatility DAO Discord of the pull request. 
-5. DAO users will comment on all proposed system parameters.
-6. A community call will be scheduled to discuss the changes.
+2. In your System_Parameters directory, fill out the `status.json` file (name and description only).
+3. Move your `System_Parameters_YYYY-MM-DD`directory into the [Step_1](Proposed/Oracle_System_Parameters/Step_1) directory.
+4. Submit a pull request for your branch.
+5. Notify @everyone in the [Discord PIPs channel](https://discord.com/channels/807306992389062668/904816574215635025) of the Volatility DAO Discord of the pull request. 
+6. DAO users will comment on all proposed system parameters.
+7. A community call will be scheduled to discuss the changes.
 
 You can gauge the community's sentiment on your PIP in both the final call and in the Discord. You should move onto Step 2 only if you think your PIP can pass a governance vote.
 

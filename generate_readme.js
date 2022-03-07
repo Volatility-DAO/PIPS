@@ -10,7 +10,7 @@ const MUSTACHE_README = './README.mustache';
 const PROPOSED_PATH = './Proposed';
 const APPROVED_PATH = './Approved';
 const REMOVED_FAILED_PATH = './Removed_Or_Failed';
-const IGNORED_DIRS = ['PIP_TEMPLATE', 'GOVERNANCE_PROPOSAL_TEMPLATE'];
+const IGNORED_DIRS = ['PIP_TEMPLATE', 'GOVERNANCE_PROPOSAL_TEMPLATE', 'System_Parameters'];
 
 const template_data = {
 	Proposed: {
@@ -76,7 +76,7 @@ all_branches.forEach((branch) => {
 			status_json = fse.readJsonSync(file);
 
 			// let's add the path for template
-			status_json.path = file.replace('status.json', '').replace('./', './tree/' + branch + '/');
+			status_json.path = 'https://github.com/Volatility-DAO/PIPS/' + file.replace('status.json', '').replace('./', 'tree/' + branch + '/');
 
 			// let's format the approval date
 			status_json.approval_date = DateTime.fromISO(status_json.approval_date).toLocaleString(DateTime.DATE_MED);
