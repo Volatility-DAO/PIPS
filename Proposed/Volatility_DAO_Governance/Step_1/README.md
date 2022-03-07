@@ -1,1 +1,0 @@
-Click on a directory to read the proposal.

@@ -2,10 +2,12 @@ const { danger, fail } = require('danger');
 const fse = require('fs-extra')
 
 const valid_folder_paths = [
-	'^(Proposed\/(Adding_An_Index)\/Step_([1-3])\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
-	'^(Proposed\/(Adding_An_Index)\/Step_([1-3])\/([a-z0-9\-\_]+))\/implementation\/([a-z0-9\-\_\/\.]*)',
-	'^(Proposed\/(Changing_Parameters)\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
-	'^(Proposed\/(Removing_An_Index)\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
+	'^(Proposed\/(Adding_A_Methodology)\/Step_([1-3])\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
+	'^(Proposed\/(Adding_A_Methodology)\/Step_([1-3])\/([a-z0-9\-\_]+))\/Implementation\/([a-z0-9\-\_\/\.]*)',
+	'^(Proposed\/(Adding_A_Methodology)\/Step_([1-3])\/([a-z0-9\-\_]+))\/Index_PIPs\/([a-z0-9\-\_\/\.]*)',
+	'^(Proposed\/(Managing_A_Methodology)\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
+	'^(Proposed\/(Managing_An_Index)\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
+	'^(Proposed\/(Oracle_System_Parameters)\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
 	'^(Proposed\/(Volatility_DAO_Governance)\/Step_([1])\/([a-z0-9\-\_]+))\/([a-z0-9\-\_\/\.]*)',
 ];
 
@@ -91,49 +93,32 @@ const get_proposal_files = function (path, proposal_content) {
 let proposal_content = get_proposal_files(proposal_working_dir, { paths: [], files: [] });
 
 // now we determine which proposal type they're submitting and validate accordingly
-if (proposal_type === 'Adding_An_Index') {
-	const required_adding_an_index_files = [...[
+if (proposal_type === 'Adding_A_Methodology') {
+	const required_adding_a_methodology_files = [...[
+		'Gas_Estimates.png',
+		'Implementation_Parameters.md',
 		'LICENSE',
 		'README.md',
-		'Implementation_Parameters.md',
+		'Set_Drop.xlsx',
 		methodology_name + '.pdf',
 	], ...required_files];
 
-	const required_adding_an_index_paths = [
-		'implementation',
+	const required_adding_a_methodology_paths = [
+		'Implementation',
+		'Index_PIPs'
 	];
 
-	required_adding_an_index_files.forEach((rf) => {
+	required_adding_a_methodology_files.forEach((rf) => {
 		if (!proposal_content.files.some(v => v.toLowerCase() === rf.toLowerCase())) {
 			fail('File required: `' + rf + '`, please add.');
 		}
 	});
 
-	required_adding_an_index_paths.forEach((rf) => {
+	required_adding_a_methodology_paths.forEach((rf) => {
 		if (!proposal_content.paths.some(v => v.toLowerCase() === rf.toLowerCase())) {
 			fail('Directory required: `' + rf + '`, please add.');
 		}
 	});
-
-	// either of these files must be present, but not both
-	const methodology_pip_file = [
-		'METHODOLOGY_NAME_PIP.md',
-		methodology_name + '_PIP.md'
-	];
-	const has_methodology_pip_file = [];
-	methodology_pip_file.forEach((mpf) => {
-		has_methodology_pip_file.push(proposal_content.files.some(v => v.toLowerCase() === mpf.toLowerCase()));
-	});
-	// neither file is there
-	if (!has_methodology_pip_file.includes(true)) {
-		fail("The methodology PIP file is missing, you should have either `" + methodology_pip_file.join("` or `") + "` in your methodology directory.");
-		return;
-	}
-	// both files are there
-	if (has_methodology_pip_file.every(v => v === true)) {
-		fail("Only one methodology file should be present both `" + methodology_pip_file.join("` and `") + "` is in your methodology directory.");
-		return;
-	}
 
 	// now we validate depending on the current step we're on
 	if (current_step === '1') {
@@ -150,11 +135,11 @@ if (proposal_type === 'Adding_An_Index') {
 		}
 	}
 } else if (proposal_type === 'Volatility_DAO_Governance') {
-	const required_adding_an_index_files = [...[
+	const required_dao_governance_files = [...[
 		'README.md',
 	], required_files];
 
-	required_adding_an_index_files.forEach((rf) => {
+	required_dao_governance_files.forEach((rf) => {
 		if (!proposal_content.files.some(v => v.toLowerCase() === rf.toLowerCase())) {
 			fail('File required: `' + rf + '`, please add.');
 		}
