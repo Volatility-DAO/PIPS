@@ -2,4 +2,4 @@
 
 [See current Approved Governance proposals here](/../../#governance).
 
-[See current Approved DAOracle proposals here](/../../#daoracle).
+[See current Approved Volatility Oracle proposals here](/../../#daoracle).
