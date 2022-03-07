@@ -27,7 +27,7 @@ For detailed steps on how to submit a pull request, you can follow the instructi
 
 |Next Available Proposal Number|
 |-------------|
-|Proposal_05|
+|Proposal_07|
 
 <details><summary>Step 1 - Submit Governance Proposal</summary>
  
