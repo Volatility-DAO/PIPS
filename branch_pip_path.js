@@ -7,10 +7,6 @@ const IGNORED_DIRS = ['PIP_TEMPLATE', 'GOVERNANCE_PROPOSAL_TEMPLATE'];
 
 const proposed_paths = [
 	'Adding_A_Methodology',
-	'Managing_A_Methodology',
-	'Managing_An_Index',
-	'Oracle_System_Parameters',
-	'Volatility_DAO_Governance'
 ];
 
 const path_regex = new RegExp('^.\/Proposed\/(' + proposed_paths.join('|') + ')\/(Step_[1-3])\/([a-z0-9\-\_]+)\/README.md', 'i');
