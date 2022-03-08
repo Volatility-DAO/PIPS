@@ -83,7 +83,9 @@ Directory Status Keys:
 | [Proposal_06](https:&#x2F;&#x2F;github.com&#x2F;Volatility-DAO&#x2F;PIPS&#x2F;tree&#x2F;Proposal_06&#x2F;Proposed&#x2F;Volatility_DAO_Governance&#x2F;Step_1&#x2F;Proposal_06&#x2F;)| Send 800,000 VOL tokens into a Sponsor Pool when the DAOracle smart contracts launch. These tokens will be used as rewards and bonds to ensure the MFIV index is audited. | Step 1 |
 
 ### Oracle System Parameters
-*There are currently no oracle system parameter proposals, start one!*
+| Proposal | Description | Current Step |
+| --- | --- | --- | 
+| [System_Parameters_2022_03_07](https:&#x2F;&#x2F;github.com&#x2F;Volatility-DAO&#x2F;PIPS&#x2F;tree&#x2F;System_Parameters_2022_03_07&#x2F;Proposed&#x2F;Oracle_System_Parameters&#x2F;Step_1&#x2F;System_Parameters_2022_03_07&#x2F;)| Initial System Parameters for the Volatility Oracle | Step 1 |
 
 ### Adding A Methodology
 *There are currently no adding a methodology proposals, start one!*

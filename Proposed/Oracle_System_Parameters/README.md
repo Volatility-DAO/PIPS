@@ -43,7 +43,7 @@ Currently The Volatility Oracle only accepts tokens that have been approved by U
 
 #### Understanding Process
 
-Your PIP will need to go through two distinct steps and a pull request. All templates are provided in the [System_Parameters](Proposed/Oracle_System_Parameters/System_Parameters) directory. **YOU SHOULD ONLY FILL OUT A TEMPLATE FOR THE CURRENT STEP IN YOUR SUBMISSION PROCESS.**
+Your PIP will need to go through two distinct steps and a pull request. The template is provided in the [System_Parameters](Proposed/Oracle_System_Parameters/System_Parameters) directory. **YOU SHOULD ONLY FILL OUT A TEMPLATE FOR THE CURRENT STEP IN YOUR SUBMISSION PROCESS.**
 
 #### Get Feedback On Your Idea
 Anyone can publicly post an idea that they have for system parameters on the [Volatility Protocol Forum](https://forum.volatility.com/). The purpose of an idea is to elicit lots of feedback. Therefore, it’s good practice to do the following:
@@ -69,8 +69,9 @@ For detailed steps on how to submit a pull request, you can follow the instructi
 <details><summary> Step 1 - Propose System Parameters</summary>
 To submit a change to the System Parameters, take the following steps:
 
-1. Fill out the `System_Parameters.md` file. Note: This file is a copy of the currently used parameters. Only fill out parameters that you are proposing to change.
-2. In your System_Parameters directory, fill out the `status.json` file (name and description only).
+1. Copy the `System_Parameters.md` file from the [Approved/System_Parameters](../../Approved/Volatility_Oracle_PIPs/System_Parameters/) directory to your new `System_Parameters_YYYY-MM-DD` directory.
+1. Fill out the `System_Parameters.md` file. **Note: This file is a copy of the currently used parameters. Only fill out parameters that you are proposing to change.**
+2. In your `System_Parameters_YYYY-MM-DD` directory, fill out the `status.json` file (name and description only).
 3. Move your `System_Parameters_YYYY-MM-DD`directory into the [Step_1](Proposed/Oracle_System_Parameters/Step_1) directory.
 4. Submit a pull request for your branch.
 5. Notify @everyone in the [Discord PIPs channel](https://discord.com/channels/807306992389062668/904816574215635025) of the Volatility DAO Discord of the pull request. 
@@ -124,8 +125,8 @@ Voting `No` - Means that the pull request will be Failed and system parameters t
 | Status | Description |
 | --- | --- |
 | `Abandoned` | If a PIP is stuck at a step for many months or if a creator stops working on a PIP the pull request will be denied. It will be tagged with Abandoned.  |
-| `Approved` |  If a PIP is Approved it will officially change the system parameters of the Volatility Oracle. The pull request will be approved and the `System_Parameters.md` file will be updated within the [Approved/Volatility_Oracle_PIPs directory](/Approved/Volatility_Oracle_PIPs/). The DAO multi-sig will update the system parameters.|
-| `Failed` | If a PIP is Failed then that means the vote did not pass. The proposal will not be implemented by the DAO. The SYSTEM_PARAMETERS_YYYY-MM-DD will be moved to the [Removed_Or_Failed/Volatility_Oracle_System_Parameters directory](/Removed_Or_Failed/Volatility_Oracle_System_Parameters/) and the pull request will be merged. |
+| `Approved` |  If a PIP is Approved it will officially change the system parameters of the Volatility Oracle. The pull request will be approved and the `System_Parameters.md` file will be updated within the [Approved/Volatility_Oracle_PIPs/System_Parameters directory](/Approved/Volatility_Oracle_PIPs/System_Parameters/). The DAO multi-sig will update the system parameters.|
+| `Failed` | If a PIP is Failed then that means the vote did not pass. The proposal will not be implemented by the DAO. The SYSTEM_PARAMETERS_YYYY-MM-DD directory will be moved to the [Removed_Or_Failed/Volatility_Oracle_System_Parameters directory](/Removed_Or_Failed/Volatility_Oracle_System_Parameters/) and the pull request will be merged. |
 </details>
 
 [See current Oracle System Parameters proposals here](/../../#oracle-system-parameters).
