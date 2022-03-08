@@ -34,6 +34,14 @@ See [mfiv schema](./schemas/mfivexample.schema.json)
 (*    This message will be updated when historical      *)
 (*    data is added.                                    *)
 (*                                                      *)
+(*           IMPORTANT NOTE UPDATE 2022-03-08           *)
+(*    The URL for IPFS data has changed from using      *)
+(*    ISO to UNIX epoch. To access historical data      *)
+(*    from 2022-01-29T01:45:00Z thru  2022-03-08        *)
+(*    revert to ISO.                                    *)
+(*                                                      *)
+(*                                                      *)
+(*                                                      *)
 (********************************************************)
 ```
 There are two ways you can easily access the IPFS data:
@@ -41,7 +49,9 @@ There are two ways you can easily access the IPFS data:
 1. Programatically Create IPFS JSON file.
 2. Access the IPFS data via a URL and download the data as a JSON.
 
-Currently, IPFS is being written every 5 minutes on the hour so you MUST enter a time in 5-minute increments UTC (e.g. "07:00", "07:05", "07:10", etc.). Time is in 24-hour format (e.g. 3pm = 15:00:00, 9:30pm = 21:30:00). Otherwise, you will get a file not found error, or you will generate a URL that gives a 404.
+Currently, IPFS is being written every 5 minutes on the hour so you MUST enter a time in 5-minute increments UTC (e.g. "07:00", "07:05", "07:10", etc.). Time is UNIX timestamp in seconds since epoch (e.g. 1646760300). Otherwise, you will get a file not found error, or you will generate a URL that gives a 404.
+
+
 
 **Programatically Create IPFS JSON file**
 
@@ -49,12 +59,12 @@ This bash script has a dependency of `jq` for pretty printing but feel free to m
 
 ```
 #
-# Usage: fetch_fleek 2022-01-27 01:00:00
+# Usage: fetch_fleek 1646760300
 # Timestamps are always in UTC
 # Requires 'jq' to be installed -- "brew install jq" (https://stedolan.github.io/jq/download/)
 #
 fetch_fleek() {
-    local timestamp="${1}T${2}Z"
+    local timestamp="${1}"
     set -o pipefail # Set pipefail option so if curl fails the script will stop
     if ! curl --silent -L "https://storageapi.fleek.co/volatilitycom-bucket/indices/methodology=mfiv/interval=14d/currency=ETH/at=$timestamp/evidence.json" | jq .; then
         echo "Command exited with code $?"
@@ -66,7 +76,7 @@ fetch_fleek() {
 Here's an example of fetching data and writing it to a file:
 
 ```
-$ fetch_fleek 2022-01-27 01:00:00 2>&1 | tee evidence.json 
+$ fetch_fleek 1646760300 2>&1 | tee evidence.json 
 ```
 
 **Programatically Create URL**
@@ -78,7 +88,7 @@ The following script will make a header request to `fleek` to get the IPFS hash 
 # Requires 'jq' to be installed -- "brew install jq" (https://stedolan.github.io/jq/download/)
 #
 fetch_ipfs() {
-    local timestamp="${1}T${2}Z"
+    local timestamp="${1}"
     set -o pipefail # Set pipefail option so if curl fails the script will stop
     if ! curl -L -sI "https://storageapi.fleek.co/volatilitycom-bucket/indices/methodology=mfiv/interval=14d/currency=ETH/at=$timestamp/evidence.json" | tr -d '\r' | awk 'BEGIN {FS=": "}/^etag/{printf $2}' | tr -d '"' | awk '{printf "https://ipfs.io/ipfs/%s\n", $1}'; then
         echo "Command exited with code $?"
@@ -90,13 +100,15 @@ fetch_ipfs() {
 Here's an example of fetching the URL:
 
 ```
-$ fetch_ipfs 2022-01-27 01:00:00
+$ fetch_ipfs 1646760300
 ```
 
 Here's an example output URL. Notice it uses the IPFShash.
 
 ```
-https://ipfs.io/ipfs/bafybeicwobtev44ivytnii24myc6fhxgpcimxnryneqlghbg4f2vcf6ugy
+https://ipfs.io/ipfs/bafybeidf4c6jrg3tsg77jkwiposm3zot4wt3st6glbimgzyns3kkumnlay
+
+CHANGE THIS URL
 ```
 
 Download the data and name evidence.json and add into the `implementation` folder.
@@ -119,16 +131,16 @@ https://storageapi.fleek.co/volatilitycom-bucket/indices/methodology=mfiv/interv
 
 Where
 
-- `$timestamp` - is written as the UTC ```DATE + "T" + TIME + "Z"```  to the second (MS are not included). 
+- `$timestamp` - is written as the UNIX timestamp in seconds since the last epoch: ```1646760300```. 
 
-For example you would write 2022-01-27 01:00:00 UTC as:
+For example you would write GMT: Tuesday, March 8, 2022 5:25:00 PM:
 
-```2022-01-27T01:00:00Z```
+```1646760300```
 
 Which would give the following URL:
 
 ```
-https://storageapi.fleek.co/volatilitycom-bucket//indices/methodology=mfiv/interval=14d/currency=ETH/at=2022-01-27T01:00:00Z/evidence.json
+https://storageapi.fleek.co/volatilitycom-bucket//indices/methodology=mfiv/interval=14d/currency=ETH/at=1646760300/evidence.json
 ```
 
 Download the data and add into the `implementation` folder.
@@ -155,10 +167,10 @@ In terminal you will now see the following:
 {
   "methodology": "mfiv",
   "currency": "ETH",
-  "estimatedFor": "2022-01-27T01:00:00.011Z",
-  "dVol": 98.74835628391783,
-  "invdVol": 101.26750840538902,
-  "value": 98.74835628391783
+  "estimatedFor": "2022-03-08T17:25:00.000Z",
+  "dVol": 94.75818533098045,
+  "invdVol": 105.53178034246903,
+  "value": 94.75818533098045
 }
 ```
 
