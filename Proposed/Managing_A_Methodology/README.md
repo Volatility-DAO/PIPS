@@ -13,12 +13,11 @@ However, Managing a Methodology does **NOT** allow for changes to the following:
 
 ## Steps
 
-
 <details><summary> Starting Your PIP</summary>
 
 #### Understanding Process
 
-Your PIP will need to go through two distinct steps and a pull request. You will need to fillout the [Managing_A_Methodology_Template.md](/Proposed/Managing_A_Methodology/Manading_A_Methodology_Template.md).
+Your PIP will need to go through two distinct steps and a pull request.
 
 #### Get Feedback On Your Idea
 Anyone can publicly post an idea that they have for managing a methodology on the [Volatility Protocol Forum](https://forum.volatility.com/). The purpose of an idea is to elicit lots of feedback. Therefore, it’s good practice to do the following:
@@ -36,36 +35,46 @@ For detailed steps on how to submit a pull request, you can follow the instructi
 
 1. Clone this repository.
 2. Create a new branch. Name your branch based on the action of this PIP:
-	- For managing an existing methodology, name your branch: `Managing_METHODOLOGY_YYYY-MM-DD`. For example, Managing_MFIV_2022-02-27.
+	- For changing an existing methodology, name your branch: `Changing_METHODOLOGY_YYYY-MM-DD`. For example, Changing_MFIV_2022-02-27.
 	- For removing an existing methodology, name your branch: `Remove_METHODOLOGY_YYYY-MM-DD`. For example, Remove_MFIV_2022-02-27.
-3. If you are requesting a methodology be removed, then duplicate the the `REMOVE_A_METHODOLOGY_YYYY-MM-DD.md` file. Rename the directory with the same name as your brach. DO NOT CHANGE THE TEMPLATE, ONLY YOUR COPY.
+3. Duplicate the directory based on your action of this PIP:
+	- For changing an existing methodology, duplicate the [CHANGING_METHODOLOGY_TEMPLATE](./CHANGING_METHODOLOGY_TEMPLATE/) directory. Rename the directory as `Change_METHODOLOGY_YYYY-MM-DD`. DO NOT CHANGE THE TEMPLATE ITSELF, ONLY YOUR COPY. This directory will be passed through each step of the PIP process.
+	- For removing an existing methodology, duplicate the [REMOVING_METHODOLOGY_TEMPLATE](./REMOVING_METHODOLOGY_TEMPLATE/) directory. Rename the directory as `Remove_METHODOLOGY_YYYY-MM-DD`. DO NOT CHANGE THE TEMPLATE ITSELF, ONLY YOUR COPY. This directory will be passed through each step of the PIP process.
+
 </details>
 
 <details><summary> Step 1 - Changing A Methodology's Implementation Or Removing a Methodology</summary>
 Your PIP should be changing a methodology's implementation OR removing a methodology, not both. Choose one.
+
 
 ### Changing A Methodology's Implementation
 
 To submit a change to a methodology's implementation, take the following steps:
 
 1. Make the proposed changes to the Approved Methodology Directory.
-    * Note: You are not duplicating the directory.  
-2. Submit a pull request for your branch.
-3. Under your pull request comment on every changed file. Every comment should address the following:
+    * Note: You are not duplicating the directory. 
+2. In your `Change_METHODOLOGY_YYYY-MM-DD` directory, fill out the following files:
+	* `README.md`
+	* `status.json` (name and description only)
+3. Submit a pull request for your branch.
+4. Under your pull request comment on every changed file. Every comment should address the following:
     * What is being changed in this file?
     * Why are you proposing this change?
     * How will this affect the implementation?
     * Does this affect the fidelity of the implementation to the METHODOLOGY.pdf?
-4. Notify @everyone in the [Discord PIPs channel](https://discord.com/channels/807306992389062668/904816574215635025) of the Volatility DAO Discord of the pull request. 
-5. DAO users will comment on all proposed changes.
-6. A community call will be scheduled to discuss the changes.
+5. Notify @everyone in the [Discord PIPs channel](https://discord.com/channels/807306992389062668/904816574215635025) of the Volatility DAO Discord of the pull request. 
+6. DAO users will comment on all proposed changes.
+7. A community call will be scheduled to discuss the changes.
 
 You can gauge the community's sentiment on your PIP in both the final call and in Discord. You should move onto Step 2 only if you think your PIP can pass a governance vote.
 
+
 ### Removing a Methodology
 
-1. Fill out the `REMOVE_A_METHODOLOGY_YYYY-MM-DD.md` file. 
-2. Add your `REMOVE_A_METHODOLOGY_YYYY-MM-DD.md` file to the METHODOLOGY directory. Then move the METHODOLOGY directory to the [Removed_Or_Failed/Volatility_Oracle_Methodologies](/Removed_Or_Failed/Volatility_Oracle_Methodologies/) directory.
+1. In your `Remove_METHODOLOGY_YYYY-MM-DD` directory, fill out the following files:
+	* `README.md`
+	* `status.json` (name and description only)
+2. Then move the METHODOLOGY directory to the [Removed_Or_Failed/Volatility_Oracle_Methodologies](/Removed_Or_Failed/Volatility_Oracle_Methodologies/) directory.
 3. Submit a pull request for your branch.
 4. Notify @everyone in the [Discord PIPs channel](https://discord.com/channels/807306992389062668/904816574215635025) of the Volatility DAO Discord of the pull request. 
 5. DAO users will comment on all proposed changes.
@@ -93,19 +102,19 @@ Formatting a vote:
 1. The vote must use single choice voting. Those single choices must be YES and NO. There may be no other choices besides those two.
 2. The following text must be used as the vote's title and description. Change the CAPS text where needed with the appropriate information:
 
-### Text for managing a methodology
+### Text for changing a methodology
 
 | `Title`  |
 | ------------- | 
 ```
-Vote to determine if the Managing_METHODOLOGY_YYYY-MM-DD pull request should be approved. 
+Vote to determine if the Changing_METHODOLOGY_YYYY-MM-DD pull request should be approved. 
 ``` 
 
 
 | `Body`  |
 | ------------- |
 ```
-This vote is to determine if the Managing_METHODOLOGY_YYYY-MM-DD pull request should be approved and that the current approved implementation of METHODOLOGY will be modified. You can find the final pull request here: INSERT_URL.
+This vote is to determine if the Changing_METHODOLOGY_YYYY-MM-DD pull request should be approved and that the current approved implementation of METHODOLOGY will be modified. You can find the final pull request here: INSERT_URL.
 
 Voting `Yes` - Means that the pull request will be approved and the current METHODOLOGY implementation will change.
 
@@ -117,14 +126,14 @@ Voting `No` - Means that the pull request will be Failed and the current METHODO
 | `Title`  |
 | ------------- | 
 ```
-Vote to determine if the Managing_METHODOLOGY_YYYY-MM-DD pull request should be approved. 
+Vote to determine if the Removing_METHODOLOGY_YYYY-MM-DD pull request should be approved. 
 ``` 
 
 
 | `Body`  |
 | ------------- |
 ```
-This vote is to determine if the Managing_METHODOLOGY_YYYY-MM-DD pull request should be approved and that the current approved METHODOLOGY will be removed from the Volatility Oracle. You can find the final pull request here: INSERT_URL.
+This vote is to determine if the Removing_METHODOLOGY_YYYY-MM-DD pull request should be approved and that the current approved METHODOLOGY will be removed from the Volatility Oracle. You can find the final pull request here: INSERT_URL.
 
 Voting `Yes` - Means that the pull request will be approved and the current METHODOLOGY will be removed from the Volatility Oracle.
 
