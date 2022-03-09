@@ -40,6 +40,7 @@ For detailed steps on how to submit a pull request, you can follow the instructi
 3. Duplicate the directory based on your action of this PIP:
 	- For changing an existing methodology, duplicate the [CHANGING_METHODOLOGY_TEMPLATE](./CHANGING_METHODOLOGY_TEMPLATE/) directory. Rename the directory as `Change_METHODOLOGY_YYYY-MM-DD`. DO NOT CHANGE THE TEMPLATE ITSELF, ONLY YOUR COPY. This directory will be passed through each step of the PIP process.
 	- For removing an existing methodology, duplicate the [REMOVING_METHODOLOGY_TEMPLATE](./REMOVING_METHODOLOGY_TEMPLATE/) directory. Rename the directory as `Remove_METHODOLOGY_YYYY-MM-DD`. DO NOT CHANGE THE TEMPLATE ITSELF, ONLY YOUR COPY. This directory will be passed through each step of the PIP process.
+3. Move your new directory into the [Step_1](./Step_1/) directory.
 
 </details>
 
