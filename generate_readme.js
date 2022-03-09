@@ -10,7 +10,7 @@ const MUSTACHE_README = './README.mustache';
 const PROPOSED_PATH = './Proposed';
 const APPROVED_PATH = './Approved';
 const REMOVED_FAILED_PATH = './Removed_Or_Failed';
-const IGNORED_DIRS = ['PIP_TEMPLATE', 'GOVERNANCE_PROPOSAL_TEMPLATE', 'CHANGING_METHODOLOGY_TEMPLATE', 'REMOVING_METHODOLOGY_TEMPLATE', 'System_Parameters'];
+const IGNORED_DIRS = ['PIP_TEMPLATE', 'GOVERNANCE_PROPOSAL_TEMPLATE', 'CHANGING_METHODOLOGY_TEMPLATE', 'REMOVING_METHODOLOGY_TEMPLATE', 'SYSTEM_PARAMETERS_TEMPLATE'];
 
 const template_data = {
 	Proposed: {
@@ -51,8 +51,6 @@ const get_json_files = function (path, files) {
 // let's get all branches (ignoring "main")
 const all_branches = [...new Set(branches.sync('.'))];
 
-console.log(all_branches);
-
 // now we need to loop through and switch to each branch to get status.json files
 all_branches.forEach((branch) => {
 
@@ -70,7 +68,8 @@ all_branches.forEach((branch) => {
 
 	// now we parse the paths for template data
 	status_json_files.forEach((file) => {
-		let validation = file.match(/^.\/([a-z\_]+)\/([a-z\_]+)\/([a-z0-9\-\_]+)\/([a-z0-9\-\_\.]+)\/*([a-z0-9\-\_\.]+)*/i)
+
+		let validation = file.match(/^.\/([a-z0-9\-\_]+)\/([a-z0-9\-\_]+)\/([a-z0-9\-\_]+)\/([a-z0-9\-\_\.]+)\/*([a-z0-9\-\_\.]+)*/i);
 
 		if (template_data.hasOwnProperty(validation[1]) && template_data[validation[1]].hasOwnProperty(validation[2])) {
 			status_json = fse.readJsonSync(file);
