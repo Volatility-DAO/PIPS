@@ -30,7 +30,7 @@ Your PIP should doing one action, adding, updating or removing an index. Choose 
 
 ### Add Index
 1. Clone this repository.
-2. Create a new branch. Name your branch `Add_Index-METHODOLOGY-TIMEPERIOD-ASSET_YYYY-MM-DD`(e.g. - **Add_Index-MFIV-14D-ETH_2022_03-09**). 
+2. Create a new branch. Name your branch `Add_Index-METHODOLOGY-TIMEPERIOD-ASSET_YYYY-MM-DD`(e.g. - **Add_Index-MFIV-14D-ETH_2022-03-09**). 
 3. In the Approved/METHODOLOGY/Index_PIPs directory, duplicate, fill out, and rename the `METHODOLOGY-TIMEPERIOD-ASSET.md` file.  DO NOT CHANGE THE TEMPLATE, ONLY YOUR COPY.
 4. Modify the `methodology_config.yaml` in the same directory to reflect your new index.
 5. Duplicate the [ADDING_INDEX_TEMPLATE](./ADDING_INDEX_TEMPLATE/) directory. Rename the directory as `Add_Index-METHODOLOGY-TIMEPERIOD-ASSET_YYYY-MM-DD`. DO NOT CHANGE THE TEMPLATE ITSELF, ONLY YOUR COPY. This directory will be passed through each step of the PIP process.
@@ -46,7 +46,7 @@ You can gauge the community's sentiment on your PIP in both the final call and i
 
 ### Change Index
 1. Clone this repository.
-2. Create a new branch. Name your branch `Change_Index-METHODOLOGY-TIMEPERIOD-ASSET_YYYY-MM-DD`(e.g. - **Change_Index-MFIV-14D-ETH_2022_03-09**). 
+2. Create a new branch. Name your branch `Change_Index-METHODOLOGY-TIMEPERIOD-ASSET_YYYY-MM-DD`(e.g. - **Change_Index-MFIV-14D-ETH_2022-03-09**). 
 3. In the Approved/METHODOLOGY/Index_PIPs directory, modify the `METHODOLOGY-TIMEPERIOD-ASSET.md` and the `methodology_config.yaml` file for the index you want to change.
 4. Duplicate the [CHANGING_INDEX_TEMPLATE](./CHANGING_INDEX_TEMPLATE/) directory. Rename the directory as `Change_Index-METHODOLOGY-TIMEPERIOD-ASSET_YYYY-MM-DD`. DO NOT CHANGE THE TEMPLATE ITSELF, ONLY YOUR COPY. This directory will be passed through each step of the PIP process.
 5. In your `Change_Index-METHODOLOGY-TIMEPERIOD-ASSET_YYYY-MM-DD` directory, fill out the following files:
@@ -66,7 +66,7 @@ You can gauge the community's sentiment on your PIP in both the final call and i
 
 ### Remove Index
 1. Clone this repository.
-2. Create a new branch. Name your branch `Remove_Index-METHODOLOGY-TIMEPERIOD-ASSET_YYYY-MM-DD`(e.g. - **Remove_Index-MFIV-14D-ETH_2022_03-09**). 
+2. Create a new branch. Name your branch `Remove_Index-METHODOLOGY-TIMEPERIOD-ASSET_YYYY-MM-DD`(e.g. - **Remove_Index-MFIV-14D-ETH_2022-03-09**). 
 4. Remove the `METHODOLOGY-TIMEPERIOD-ASSET.md` file for the index you want to remove. 
 5. Remove the index from the `methodology_config.yaml`in the same directory.
 4. Duplicate the [REMOVING_INDEX_TEMPLATE](./REMOVING_INDEX_TEMPLATE/) directory. Rename the directory as `Remove_Index-METHODOLOGY-TIMEPERIOD-ASSET_YYYY-MM-DD`. DO NOT CHANGE THE TEMPLATE ITSELF, ONLY YOUR COPY. This directory will be passed through each step of the PIP process.
