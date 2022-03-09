@@ -35,7 +35,7 @@ For detailed steps on how to submit a pull request, you can follow the instructi
 1. Clone this repository.
 2. Create a new branch.
 	- Name your branch: `SYSTEM_PARAMETERS_YYYY-MM-DD`.
-3. Duplicate the [System_Parameters](System_Parameters) directory. Rename the directory as `System_Parameters_YYYY-MM-DD`. DO NOT CHANGE THE TEMPLATE ITSELF, ONLY YOUR COPY. This directory will be passed through each step of the PIP process.
+3. Duplicate the [SYSTEM_PARAMETERS_TEMPLATE](SYSTEM_PARAMETERS_TEMPLATE) directory. Rename the directory as `System_Parameters_YYYY-MM-DD`. DO NOT CHANGE THE TEMPLATE ITSELF, ONLY YOUR COPY. This directory will be passed through each step of the PIP process.
 
 </details>
 
@@ -45,7 +45,7 @@ To submit a change to the System Parameters, take the following steps:
 1. Copy the `System_Parameters.md` file from the [Approved/System_Parameters](../../Approved/Volatility_Oracle_PIPs/System_Parameters/) directory to your new `System_Parameters_YYYY-MM-DD` directory.
 1. Fill out the `System_Parameters.md` file. **Note: This file is a copy of the currently used parameters. Only fill out parameters that you are proposing to change.**
 2. In your `System_Parameters_YYYY-MM-DD` directory, fill out the `status.json` file (name and description only).
-3. Move your `System_Parameters_YYYY-MM-DD`directory into the [Step_1](Proposed/Oracle_System_Parameters/Step_1) directory.
+3. Move your `System_Parameters_YYYY-MM-DD` directory into the [Step_1](./Step_1/) directory.
 4. Submit a pull request for your branch.
 5. Notify @everyone in the [Discord PIPs channel](https://discord.com/channels/807306992389062668/904816574215635025) of the Volatility DAO Discord of the pull request. 
 6. DAO users will comment on all proposed system parameters.
