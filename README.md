@@ -91,7 +91,9 @@ Directory Status Keys:
 *There are currently no adding a methodology proposals, start one!*
 
 ### Managing A Methodology
-*There are currently no managing a methodology proposals, start one!*
+| Proposal | Description | Current Step |
+| --- | --- | --- | 
+| [Change_MFIV_2022-03-08](https:&#x2F;&#x2F;github.com&#x2F;Volatility-DAO&#x2F;PIPS&#x2F;tree&#x2F;Managing_METHODOLOGY_2022_03_08&#x2F;Proposed&#x2F;Managing_A_Methodology&#x2F;Step_1&#x2F;Changing_MFIV_2022-03-08&#x2F;)| Update MFIV files for the improved adding a methodology process. | Step 1 |
 
 ### Managing An Index
 *There are currently no managing an index proposals, start one!*
