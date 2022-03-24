@@ -1,0 +1,5 @@
+methodology:
+  - name: "MFIV"
+    dataPeriod: "*/5 * * * *"
+    indices:
+      - name: "MFIV-14D-ETH"
